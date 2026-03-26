@@ -12,6 +12,7 @@ export class League {
   image: string | null
   images: Image[]
   metadata: { [key: string]: string }
+  modifierSetId: string | null
   name: string | null
   orgId: string | null
   participationModel: string | null
@@ -33,6 +34,7 @@ export class League {
     this.image = data?.image || null
     this.images = data?.images || []
     this.metadata = data?.metadata || {}
+    this.modifierSetId = data?.modifierSetId || null
     this.name = data?.name || null
     this.orgId = data?.orgId || null
     this.participationModel = data?.participationModel || null
