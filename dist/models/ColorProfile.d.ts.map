@@ -1,0 +1,1 @@
+{"version":3,"file":"ColorProfile.d.ts","sourceRoot":"","sources":["../../src/models/ColorProfile.ts"],"names":[],"mappings":"AAEA,qBAAa,YAAY;IACvB,SAAS,EAAE,OAAO,CAAA;IAClB,EAAE,EAAE,MAAM,CAAA;IACV,UAAU,EAAE,MAAM,GAAG,IAAI,CAAA;IACzB,YAAY,EAAE,MAAM,GAAG,IAAI,CAAA;IAC3B,WAAW,EAAE,MAAM,GAAG,IAAI,CAAA;gBACd,IAAI,CAAC,EAAE,OAAO,CAAC,YAAY,CAAC;CAOzC"}

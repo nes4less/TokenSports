@@ -1,0 +1,45 @@
+import { Image } from './Image';
+import { Tag } from './Tag';
+export declare class Person {
+    static collection: string;
+    blurhash: string | null;
+    cashBalance: number;
+    claimToken: string | null;
+    claimedAt: string | null;
+    createdAt: string;
+    createdBy: string | null;
+    deletedAt: string | null;
+    dateOfBirth: string | null;
+    displayName: string | null;
+    email: string | null;
+    firstName: string | null;
+    id: string;
+    image: string | null;
+    images: Image[];
+    lastActiveContext: string | null;
+    lastActiveRole: string | null;
+    lastName: string | null;
+    manualEntry: boolean;
+    metadata: {
+        [key: string]: string;
+    };
+    middleName: string | null;
+    notificationPrefs: {
+        [key: string]: string;
+    };
+    password: string | null;
+    phone: string | null;
+    platformBalance: number;
+    profileVisibility: {
+        [key: string]: string;
+    };
+    publicProfile: boolean;
+    stripeAccountId: string | null;
+    tags: Tag[];
+    themeColor: string;
+    themeMode: 'dark' | 'light';
+    updatedAt: string;
+    verified: boolean;
+    constructor(data?: Partial<Person>);
+}
+//# sourceMappingURL=Person.d.ts.map
