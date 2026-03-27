@@ -2,6 +2,7 @@ import { generateDateString, generateUUID } from '../utils'
 
 export class Participation {
   static collection: string = 'participations'
+  coedStatus: 'male' | 'female' | null
   confirmedAt: string | null
   createdAt: string
   createdBy: string | null
@@ -19,6 +20,7 @@ export class Participation {
   status: string | null
   updatedAt: string
   constructor(data?: Partial<Participation>) {
+    this.coedStatus = data?.coedStatus || null
     this.confirmedAt = data?.confirmedAt || null
     this.createdAt = data?.createdAt || generateDateString()
     this.createdBy = data?.createdBy || null
