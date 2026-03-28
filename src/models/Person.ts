@@ -4,6 +4,7 @@ import { Tag } from './Tag'
 
 export class Person {
   static collection: string = 'persons'
+  avatarImage: string | null
   blurhash: string | null
   cashBalance: number
   claimToken: string | null
@@ -36,8 +37,11 @@ export class Person {
   themeColor: string
   themeMode: 'dark' | 'light'
   updatedAt: string
+  useAvatarImage: boolean
+  useAvatarName: boolean
   verified: boolean
   constructor(data?: Partial<Person>) {
+    this.avatarImage = data?.avatarImage || null
     this.blurhash = data?.blurhash || null
     this.cashBalance = data?.cashBalance || 0
     this.claimToken = data?.claimToken || null
@@ -70,6 +74,8 @@ export class Person {
     this.themeColor = data?.themeColor || 'green'
     this.themeMode = data?.themeMode || 'dark'
     this.updatedAt = data?.updatedAt || generateDateString()
+    this.useAvatarImage = !!data?.useAvatarImage
+    this.useAvatarName = !!data?.useAvatarName
     this.verified = !!data?.verified
   }
 }

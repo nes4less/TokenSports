@@ -4,6 +4,7 @@ exports.Person = void 0;
 const utils_1 = require("../utils");
 class Person {
     constructor(data) {
+        this.avatarImage = data?.avatarImage || null;
         this.blurhash = data?.blurhash || null;
         this.cashBalance = data?.cashBalance || 0;
         this.claimToken = data?.claimToken || null;
@@ -36,6 +37,8 @@ class Person {
         this.themeColor = data?.themeColor || 'green';
         this.themeMode = data?.themeMode || 'dark';
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();
+        this.useAvatarImage = !!data?.useAvatarImage;
+        this.useAvatarName = !!data?.useAvatarName;
         this.verified = !!data?.verified;
     }
 }

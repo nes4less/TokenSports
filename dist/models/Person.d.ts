@@ -2,6 +2,7 @@ import { Image } from './Image';
 import { Tag } from './Tag';
 export declare class Person {
     static collection: string;
+    avatarImage: string | null;
     blurhash: string | null;
     cashBalance: number;
     claimToken: string | null;
@@ -40,6 +41,8 @@ export declare class Person {
     themeColor: string;
     themeMode: 'dark' | 'light';
     updatedAt: string;
+    useAvatarImage: boolean;
+    useAvatarName: boolean;
     verified: boolean;
     constructor(data?: Partial<Person>);
 }
