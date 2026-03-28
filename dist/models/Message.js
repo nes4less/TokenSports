@@ -16,6 +16,7 @@ class Message {
         this.recipientId = data?.recipientId || null;
         this.senderId = data?.senderId || null;
         this.threadId = data?.threadId || null;
+        this.translations = data?.translations || {};
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();
     }
 }

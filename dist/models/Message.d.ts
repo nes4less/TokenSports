@@ -14,6 +14,9 @@ export declare class Message {
     recipientId: string | null;
     senderId: string | null;
     threadId: string | null;
+    translations: {
+        [key: string]: string;
+    };
     updatedAt: string;
     constructor(data?: Partial<Message>);
 }

@@ -23,6 +23,7 @@ export class Content {
   slug: string | null
   tags: Tag[]
   title: string | null
+  translations: { [key: string]: string }
   type: string | null
   updatedAt: string
   constructor(data?: Partial<Content>) {
@@ -45,6 +46,7 @@ export class Content {
     this.slug = data?.slug || null
     this.tags = data?.tags || []
     this.title = data?.title || null
+    this.translations = data?.translations || {}
     this.type = data?.type || null
     this.updatedAt = data?.updatedAt || generateDateString()
   }

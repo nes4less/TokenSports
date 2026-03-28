@@ -14,6 +14,7 @@ export class Message {
   recipientId: string | null
   senderId: string | null
   threadId: string | null
+  translations: { [key: string]: string }
   updatedAt: string
   constructor(data?: Partial<Message>) {
     this.body = data?.body || null
@@ -28,6 +29,7 @@ export class Message {
     this.recipientId = data?.recipientId || null
     this.senderId = data?.senderId || null
     this.threadId = data?.threadId || null
+    this.translations = data?.translations || {}
     this.updatedAt = data?.updatedAt || generateDateString()
   }
 }

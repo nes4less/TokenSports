@@ -20,6 +20,9 @@ export declare class Comment {
     subEntityId: string | null;
     subEntityType: string | null;
     tags: Tag[];
+    translations: {
+        [key: string]: string;
+    };
     updatedAt: string;
     constructor(data?: Partial<Comment>);
 }

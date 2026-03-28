@@ -21,6 +21,7 @@ class Comment {
         this.subEntityId = data?.subEntityId || null;
         this.subEntityType = data?.subEntityType || null;
         this.tags = data?.tags || [];
+        this.translations = data?.translations || {};
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();
     }
 }

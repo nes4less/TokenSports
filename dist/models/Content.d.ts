@@ -28,6 +28,9 @@ export declare class Content {
     slug: string | null;
     tags: Tag[];
     title: string | null;
+    translations: {
+        [key: string]: string;
+    };
     type: string | null;
     updatedAt: string;
     constructor(data?: Partial<Content>);

@@ -23,6 +23,7 @@ class Content {
         this.slug = data?.slug || null;
         this.tags = data?.tags || [];
         this.title = data?.title || null;
+        this.translations = data?.translations || {};
         this.type = data?.type || null;
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();
     }

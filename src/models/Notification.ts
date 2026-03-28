@@ -15,6 +15,7 @@ export class Notification {
   read: boolean
   recipientId: string | null
   title: string | null
+  translations: { [key: string]: string }
   type: string | null
   updatedAt: string
   constructor(data?: Partial<Notification>) {
@@ -31,6 +32,7 @@ export class Notification {
     this.read = !!data?.read
     this.recipientId = data?.recipientId || null
     this.title = data?.title || null
+    this.translations = data?.translations || {}
     this.type = data?.type || null
     this.updatedAt = data?.updatedAt || generateDateString()
   }

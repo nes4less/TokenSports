@@ -15,6 +15,9 @@ export declare class Notification {
     read: boolean;
     recipientId: string | null;
     title: string | null;
+    translations: {
+        [key: string]: string;
+    };
     type: string | null;
     updatedAt: string;
     constructor(data?: Partial<Notification>);

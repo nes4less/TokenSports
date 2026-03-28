@@ -20,6 +20,7 @@ export class Comment {
   subEntityId: string | null
   subEntityType: string | null
   tags: Tag[]
+  translations: { [key: string]: string }
   updatedAt: string
   constructor(data?: Partial<Comment>) {
     this.body = data?.body || null
@@ -39,6 +40,7 @@ export class Comment {
     this.subEntityId = data?.subEntityId || null
     this.subEntityType = data?.subEntityType || null
     this.tags = data?.tags || []
+    this.translations = data?.translations || {}
     this.updatedAt = data?.updatedAt || generateDateString()
   }
 }

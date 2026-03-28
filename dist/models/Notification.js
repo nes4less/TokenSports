@@ -17,6 +17,7 @@ class Notification {
         this.read = !!data?.read;
         this.recipientId = data?.recipientId || null;
         this.title = data?.title || null;
+        this.translations = data?.translations || {};
         this.type = data?.type || null;
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();
     }
