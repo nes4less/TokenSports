@@ -15,6 +15,7 @@ class Event {
         this.metadata = data?.metadata || {};
         this.source = data?.source || null;
         this.timestamp = data?.timestamp || null;
+        this.translations = data?.translations || {};
         this.type = data?.type || null;
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();
     }

@@ -13,6 +13,9 @@ export declare class Event {
     };
     source: string | null;
     timestamp: string | null;
+    translations: {
+        [key: string]: string;
+    };
     type: string | null;
     updatedAt: string;
     constructor(data?: Partial<Event>);

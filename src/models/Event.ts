@@ -13,6 +13,7 @@ export class Event {
   metadata: { [key: string]: string }
   source: string | null
   timestamp: string | null
+  translations: { [key: string]: string }
   type: string | null
   updatedAt: string
   constructor(data?: Partial<Event>) {
@@ -27,6 +28,7 @@ export class Event {
     this.metadata = data?.metadata || {}
     this.source = data?.source || null
     this.timestamp = data?.timestamp || null
+    this.translations = data?.translations || {}
     this.type = data?.type || null
     this.updatedAt = data?.updatedAt || generateDateString()
   }
