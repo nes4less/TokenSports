@@ -1,4 +1,5 @@
 export * from './ColorProfile'
+export * from './Comment'
 export * from './Content'
 export * from './Context'
 export * from './Division'

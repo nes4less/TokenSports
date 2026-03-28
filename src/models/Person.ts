@@ -4,7 +4,6 @@ import { Tag } from './Tag'
 
 export class Person {
   static collection: string = 'persons'
-  autoTranslate: boolean
   avatarImage: string | null
   blurhash: string | null
   cashBalance: number
@@ -38,12 +37,12 @@ export class Person {
   tags: Tag[]
   themeColor: string
   themeMode: 'dark' | 'light'
+  translateMode: string | null
   updatedAt: string
   useAvatarImage: boolean
   useAvatarName: boolean
   verified: boolean
   constructor(data?: Partial<Person>) {
-    this.autoTranslate = data?.autoTranslate ?? false
     this.avatarImage = data?.avatarImage || null
     this.blurhash = data?.blurhash || null
     this.cashBalance = data?.cashBalance || 0
@@ -77,6 +76,7 @@ export class Person {
     this.tags = data?.tags || []
     this.themeColor = data?.themeColor || 'green'
     this.themeMode = data?.themeMode || 'dark'
+    this.translateMode = data?.translateMode || 'click'
     this.updatedAt = data?.updatedAt || generateDateString()
     this.useAvatarImage = !!data?.useAvatarImage
     this.useAvatarName = !!data?.useAvatarName
