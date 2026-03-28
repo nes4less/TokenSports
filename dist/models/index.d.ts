@@ -14,6 +14,7 @@ export * from './GuestPass';
 export * from './Handshake';
 export * from './Image';
 export * from './League';
+export * from './Locatable';
 export * from './Media';
 export * from './Message';
 export * from './Module';

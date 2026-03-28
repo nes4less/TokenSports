@@ -30,6 +30,7 @@ __exportStar(require("./GuestPass"), exports);
 __exportStar(require("./Handshake"), exports);
 __exportStar(require("./Image"), exports);
 __exportStar(require("./League"), exports);
+__exportStar(require("./Locatable"), exports);
 __exportStar(require("./Media"), exports);
 __exportStar(require("./Message"), exports);
 __exportStar(require("./Module"), exports);
