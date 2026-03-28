@@ -2,6 +2,7 @@ import { Image } from './Image';
 import { Tag } from './Tag';
 export declare class Person {
     static collection: string;
+    autoTranslate: boolean;
     avatarImage: string | null;
     blurhash: string | null;
     cashBalance: number;

@@ -4,6 +4,7 @@ exports.Person = void 0;
 const utils_1 = require("../utils");
 class Person {
     constructor(data) {
+        this.autoTranslate = data?.autoTranslate ?? false;
         this.avatarImage = data?.avatarImage || null;
         this.blurhash = data?.blurhash || null;
         this.cashBalance = data?.cashBalance || 0;
