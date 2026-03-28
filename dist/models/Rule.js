@@ -1,10 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Modifier = void 0;
+exports.Rule = void 0;
 const utils_1 = require("../utils");
-class Modifier {
+class Rule {
     constructor(data) {
-        this.condition = data?.condition || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
         this.key = data?.key || '';
         this.label = data?.label || null;
@@ -12,5 +11,5 @@ class Modifier {
         this.value = data?.value || null;
     }
 }
-exports.Modifier = Modifier;
-//# sourceMappingURL=Modifier.js.map
+exports.Rule = Rule;
+//# sourceMappingURL=Rule.js.map

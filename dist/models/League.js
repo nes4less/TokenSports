@@ -12,13 +12,12 @@ class League {
         this.image = data?.image || null;
         this.images = data?.images || [];
         this.metadata = data?.metadata || {};
-        this.modifierSetId = data?.modifierSetId || null;
         this.name = data?.name || null;
         this.orgId = data?.orgId || null;
         this.participationModel = data?.participationModel || null;
         this.registrationClose = data?.registrationClose || null;
         this.registrationOpen = data?.registrationOpen || null;
-        this.rulesetId = data?.rulesetId || null;
+        this.ruleSetId = data?.ruleSetId || null;
         this.sessionId = data?.sessionId || null;
         this.slug = data?.slug || null;
         this.sportType = data?.sportType || null;

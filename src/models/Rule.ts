@@ -1,14 +1,12 @@
 import { generateUUID } from '../utils'
 
-export class Modifier {
-  condition: string | null
+export class Rule {
   id: string
   key: string
   label: string | null
   type: string | null
   value: string | null
-  constructor(data?: Partial<Modifier>) {
-    this.condition = data?.condition || null
+  constructor(data?: Partial<Rule>) {
     this.id = data?.id || generateUUID()
     this.key = data?.key || ''
     this.label = data?.label || null

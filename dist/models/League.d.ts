@@ -12,13 +12,12 @@ export declare class League {
     metadata: {
         [key: string]: string;
     };
-    modifierSetId: string | null;
     name: string | null;
     orgId: string | null;
     participationModel: string | null;
     registrationClose: string | null;
     registrationOpen: string | null;
-    rulesetId: string | null;
+    ruleSetId: string | null;
     sessionId: string | null;
     slug: string | null;
     sportType: string | null;
