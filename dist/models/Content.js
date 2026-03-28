@@ -4,6 +4,7 @@ exports.Content = void 0;
 const utils_1 = require("../utils");
 class Content {
     constructor(data) {
+        this.attachments = data?.attachments || [];
         this.blurhash = data?.blurhash || null;
         this.category = data?.category || [];
         this.createdAt = data?.createdAt || (0, utils_1.generateDateString)();
@@ -11,6 +12,7 @@ class Content {
         this.deletedAt = data?.deletedAt || null;
         this.entityId = data?.entityId || null;
         this.entityType = data?.entityType || null;
+        this.expiresAt = data?.expiresAt || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
         this.image = data?.image || null;
         this.images = data?.images || [];

@@ -4,6 +4,7 @@ import { Tag } from './Tag'
 
 export class Content {
   static collection: string = 'content'
+  attachments: { url: string; name: string; type: string; size?: number }[]
   blurhash: string | null
   category: string[]
   createdAt: string
@@ -11,6 +12,7 @@ export class Content {
   deletedAt: string | null
   entityId: string | null
   entityType: string | null
+  expiresAt: string | null
   id: string
   image: string | null
   images: Image[]
@@ -23,6 +25,7 @@ export class Content {
   type: string | null
   updatedAt: string
   constructor(data?: Partial<Content>) {
+    this.attachments = data?.attachments || []
     this.blurhash = data?.blurhash || null
     this.category = data?.category || []
     this.createdAt = data?.createdAt || generateDateString()
@@ -30,6 +33,7 @@ export class Content {
     this.deletedAt = data?.deletedAt || null
     this.entityId = data?.entityId || null
     this.entityType = data?.entityType || null
+    this.expiresAt = data?.expiresAt || null
     this.id = data?.id || generateUUID()
     this.image = data?.image || null
     this.images = data?.images || []

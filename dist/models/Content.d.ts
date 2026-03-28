@@ -2,6 +2,12 @@ import { Image } from './Image';
 import { Tag } from './Tag';
 export declare class Content {
     static collection: string;
+    attachments: {
+        url: string;
+        name: string;
+        type: string;
+        size?: number;
+    }[];
     blurhash: string | null;
     category: string[];
     createdAt: string;
@@ -9,6 +15,7 @@ export declare class Content {
     deletedAt: string | null;
     entityId: string | null;
     entityType: string | null;
+    expiresAt: string | null;
     id: string;
     image: string | null;
     images: Image[];
