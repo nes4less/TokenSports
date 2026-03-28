@@ -16,6 +16,7 @@ class Content {
         this.id = data?.id || (0, utils_1.generateUUID)();
         this.image = data?.image || null;
         this.images = data?.images || [];
+        this.language = data?.language || null;
         this.metadata = data?.metadata || {};
         this.published = !!data?.published;
         this.section = data?.section || null;

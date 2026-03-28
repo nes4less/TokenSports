@@ -19,6 +19,7 @@ export declare class Content {
     id: string;
     image: string | null;
     images: Image[];
+    language: string | null;
     metadata: {
         [key: string]: string;
     };

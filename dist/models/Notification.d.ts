@@ -7,6 +7,7 @@ export declare class Notification {
     entityType: string | null;
     id: string;
     image: string | null;
+    language: string | null;
     message: string | null;
     metadata: {
         [key: string]: string;

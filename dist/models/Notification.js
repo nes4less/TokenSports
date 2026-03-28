@@ -11,6 +11,7 @@ class Notification {
         this.entityType = data?.entityType || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
         this.image = data?.image || null;
+        this.language = data?.language || null;
         this.message = data?.message || null;
         this.metadata = data?.metadata || {};
         this.read = !!data?.read;

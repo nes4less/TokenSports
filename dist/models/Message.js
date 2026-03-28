@@ -9,6 +9,7 @@ class Message {
         this.deletedAt = data?.deletedAt || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
         this.image = data?.image || null;
+        this.language = data?.language || null;
         this.metadata = data?.metadata || {};
         this.parentId = data?.parentId || null;
         this.readAt = data?.readAt || null;

@@ -7,6 +7,7 @@ export class Message {
   deletedAt: string | null
   id: string
   image: string | null
+  language: string | null
   metadata: { [key: string]: string }
   parentId: string | null
   readAt: string | null
@@ -20,6 +21,7 @@ export class Message {
     this.deletedAt = data?.deletedAt || null
     this.id = data?.id || generateUUID()
     this.image = data?.image || null
+    this.language = data?.language || null
     this.metadata = data?.metadata || {}
     this.parentId = data?.parentId || null
     this.readAt = data?.readAt || null

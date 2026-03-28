@@ -9,6 +9,7 @@ export class Notification {
   entityType: string | null
   id: string
   image: string | null
+  language: string | null
   message: string | null
   metadata: { [key: string]: string }
   read: boolean
@@ -24,6 +25,7 @@ export class Notification {
     this.entityType = data?.entityType || null
     this.id = data?.id || generateUUID()
     this.image = data?.image || null
+    this.language = data?.language || null
     this.message = data?.message || null
     this.metadata = data?.metadata || {}
     this.read = !!data?.read

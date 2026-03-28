@@ -16,6 +16,7 @@ export class Content {
   id: string
   image: string | null
   images: Image[]
+  language: string | null
   metadata: { [key: string]: string }
   published: boolean
   section: string | null
@@ -37,6 +38,7 @@ export class Content {
     this.id = data?.id || generateUUID()
     this.image = data?.image || null
     this.images = data?.images || []
+    this.language = data?.language || null
     this.metadata = data?.metadata || {}
     this.published = !!data?.published
     this.section = data?.section || null
