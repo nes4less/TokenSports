@@ -21,6 +21,7 @@ export * from './Organization';
 export * from './Participation';
 export * from './Payment';
 export * from './Person';
+export * from './Query';
 export * from './Relationship';
 export * from './Roster';
 export * from './RotationGroup';
@@ -33,4 +34,5 @@ export * from './Tag';
 export * from './Team';
 export * from './Transaction';
 export * from './Venue';
+export * from './View';
 //# sourceMappingURL=index.d.ts.map

@@ -37,6 +37,7 @@ __exportStar(require("./Organization"), exports);
 __exportStar(require("./Participation"), exports);
 __exportStar(require("./Payment"), exports);
 __exportStar(require("./Person"), exports);
+__exportStar(require("./Query"), exports);
 __exportStar(require("./Relationship"), exports);
 __exportStar(require("./Roster"), exports);
 __exportStar(require("./RotationGroup"), exports);
@@ -49,4 +50,5 @@ __exportStar(require("./Tag"), exports);
 __exportStar(require("./Team"), exports);
 __exportStar(require("./Transaction"), exports);
 __exportStar(require("./Venue"), exports);
+__exportStar(require("./View"), exports);
 //# sourceMappingURL=index.js.map
