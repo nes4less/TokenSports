@@ -5,13 +5,11 @@ const utils_1 = require("../utils");
 class Context {
     constructor(data) {
         this.approval = data?.approval || null;
-        this.color = data?.color || null;
         this.createdAt = data?.createdAt || (0, utils_1.generateDateString)();
         this.createdBy = data?.createdBy || null;
         this.deletedAt = data?.deletedAt || null;
         this.description = data?.description || null;
         this.filter = data?.filter || null;
-        this.icon = data?.icon || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
         this.implications = data?.implications || null;
         this.key = data?.key || null;

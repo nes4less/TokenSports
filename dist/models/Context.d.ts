@@ -2,13 +2,11 @@ import { Tag } from './Tag';
 export declare class Context {
     static collection: string;
     approval: string | null;
-    color: string | null;
     createdAt: string;
     createdBy: string | null;
     deletedAt: string | null;
     description: string | null;
     filter: string | null;
-    icon: string | null;
     id: string;
     implications: string | null;
     key: string | null;

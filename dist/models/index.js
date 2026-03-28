@@ -44,6 +44,7 @@ __exportStar(require("./Rule"), exports);
 __exportStar(require("./RuleSet"), exports);
 __exportStar(require("./Session"), exports);
 __exportStar(require("./StatusChange"), exports);
+__exportStar(require("./Style"), exports);
 __exportStar(require("./Tag"), exports);
 __exportStar(require("./Team"), exports);
 __exportStar(require("./Transaction"), exports);

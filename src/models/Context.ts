@@ -4,13 +4,11 @@ import { Tag } from './Tag'
 export class Context {
   static collection: string = 'contexts'
   approval: string | null
-  color: string | null
   createdAt: string
   createdBy: string | null
   deletedAt: string | null
   description: string | null
   filter: string | null
-  icon: string | null
   id: string
   implications: string | null
   key: string | null
@@ -25,13 +23,11 @@ export class Context {
   updatedAt: string
   constructor(data?: Partial<Context>) {
     this.approval = data?.approval || null
-    this.color = data?.color || null
     this.createdAt = data?.createdAt || generateDateString()
     this.createdBy = data?.createdBy || null
     this.deletedAt = data?.deletedAt || null
     this.description = data?.description || null
     this.filter = data?.filter || null
-    this.icon = data?.icon || null
     this.id = data?.id || generateUUID()
     this.implications = data?.implications || null
     this.key = data?.key || null

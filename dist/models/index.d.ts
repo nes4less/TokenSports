@@ -28,6 +28,7 @@ export * from './Rule';
 export * from './RuleSet';
 export * from './Session';
 export * from './StatusChange';
+export * from './Style';
 export * from './Tag';
 export * from './Team';
 export * from './Transaction';
