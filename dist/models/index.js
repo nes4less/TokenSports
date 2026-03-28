@@ -28,6 +28,7 @@ __exportStar(require("./GuestPass"), exports);
 __exportStar(require("./Image"), exports);
 __exportStar(require("./League"), exports);
 __exportStar(require("./Media"), exports);
+__exportStar(require("./Message"), exports);
 __exportStar(require("./Modifier"), exports);
 __exportStar(require("./ModifierSet"), exports);
 __exportStar(require("./Module"), exports);

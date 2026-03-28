@@ -12,6 +12,7 @@ export * from './GuestPass';
 export * from './Image';
 export * from './League';
 export * from './Media';
+export * from './Message';
 export * from './Modifier';
 export * from './ModifierSet';
 export * from './Module';
