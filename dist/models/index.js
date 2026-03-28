@@ -44,6 +44,7 @@ __exportStar(require("./Roster"), exports);
 __exportStar(require("./RotationGroup"), exports);
 __exportStar(require("./Rule"), exports);
 __exportStar(require("./RuleSet"), exports);
+__exportStar(require("./Scope"), exports);
 __exportStar(require("./Session"), exports);
 __exportStar(require("./StatusChange"), exports);
 __exportStar(require("./Style"), exports);

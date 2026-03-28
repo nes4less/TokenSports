@@ -1,27 +1,25 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.View = void 0;
+exports.Scope = void 0;
 const utils_1 = require("../utils");
-class View {
+class Scope {
     constructor(data) {
+        this.access = data?.access || null;
+        this.children = data?.children || [];
         this.createdAt = data?.createdAt || (0, utils_1.generateDateString)();
         this.createdBy = data?.createdBy || null;
         this.deletedAt = data?.deletedAt || null;
         this.description = data?.description || null;
-        this.format = data?.format || null;
+        this.entityId = data?.entityId || null;
+        this.entityType = data?.entityType || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
-        this.language = data?.language || null;
         this.metadata = data?.metadata || {};
         this.name = data?.name || null;
-        this.public = data?.public ?? true;
-        this.queries = data?.queries || [];
-        this.scopeId = data?.scopeId || null;
-        this.styleId = data?.styleId || null;
+        this.parentId = data?.parentId || null;
         this.tags = data?.tags || [];
-        this.type = data?.type || null;
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();
     }
 }
-exports.View = View;
-View.collection = 'views';
-//# sourceMappingURL=View.js.map
+exports.Scope = Scope;
+Scope.collection = 'scopes';
+//# sourceMappingURL=Scope.js.map

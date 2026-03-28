@@ -1,40 +1,36 @@
 import { generateDateString, generateUUID } from '../utils'
 import { Tag } from './Tag'
 
-export class View {
-  static collection: string = 'views'
+export class Scope {
+  static collection: string = 'scopes'
+  access: string | null
+  children: string[]
   createdAt: string
   createdBy: string | null
   deletedAt: string | null
   description: string | null
-  format: string | null
+  entityId: string | null
+  entityType: string | null
   id: string
-  language: string | null
   metadata: { [key: string]: string }
   name: string | null
-  public: boolean
-  queries: { queryId: string; position: number }[]
-  scopeId: string | null
-  styleId: string | null
+  parentId: string | null
   tags: Tag[]
-  type: string | null
   updatedAt: string
-  constructor(data?: Partial<View>) {
+  constructor(data?: Partial<Scope>) {
+    this.access = data?.access || null
+    this.children = data?.children || []
     this.createdAt = data?.createdAt || generateDateString()
     this.createdBy = data?.createdBy || null
     this.deletedAt = data?.deletedAt || null
     this.description = data?.description || null
-    this.format = data?.format || null
+    this.entityId = data?.entityId || null
+    this.entityType = data?.entityType || null
     this.id = data?.id || generateUUID()
-    this.language = data?.language || null
     this.metadata = data?.metadata || {}
     this.name = data?.name || null
-    this.public = data?.public ?? true
-    this.queries = data?.queries || []
-    this.scopeId = data?.scopeId || null
-    this.styleId = data?.styleId || null
+    this.parentId = data?.parentId || null
     this.tags = data?.tags || []
-    this.type = data?.type || null
     this.updatedAt = data?.updatedAt || generateDateString()
   }
 }

@@ -17,6 +17,7 @@ export declare class View {
         queryId: string;
         position: number;
     }[];
+    scopeId: string | null;
     styleId: string | null;
     tags: Tag[];
     type: string | null;
