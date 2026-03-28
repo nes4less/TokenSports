@@ -1,30 +1,28 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Scope = void 0;
+exports.Range = void 0;
 const utils_1 = require("../utils");
-class Scope {
+class Range {
     constructor(data) {
-        this.access = data?.access || null;
-        this.children = data?.children || [];
-        this.country = data?.country || null;
         this.createdAt = data?.createdAt || (0, utils_1.generateDateString)();
         this.createdBy = data?.createdBy || null;
-        this.currency = data?.currency || null;
         this.deletedAt = data?.deletedAt || null;
         this.description = data?.description || null;
         this.entityId = data?.entityId || null;
         this.entityType = data?.entityType || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
-        this.language = data?.language || null;
+        this.inclusive = data?.inclusive ?? true;
+        this.key = data?.key || null;
+        this.max = data?.max ?? null;
         this.metadata = data?.metadata || {};
+        this.min = data?.min ?? null;
         this.name = data?.name || null;
-        this.parentId = data?.parentId || null;
-        this.regionCode = data?.regionCode || null;
+        this.scope = data?.scope || null;
         this.tags = data?.tags || [];
-        this.timezone = data?.timezone || null;
+        this.unit = data?.unit || null;
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();
     }
 }
-exports.Scope = Scope;
-Scope.collection = 'scopes';
-//# sourceMappingURL=Scope.js.map
+exports.Range = Range;
+Range.collection = 'ranges';
+//# sourceMappingURL=Range.js.map

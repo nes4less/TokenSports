@@ -1,46 +1,42 @@
 import { generateDateString, generateUUID } from '../utils'
 import { Tag } from './Tag'
 
-export class Scope {
-  static collection: string = 'scopes'
-  access: string | null
-  children: string[]
-  country: string | null
+export class Range {
+  static collection: string = 'ranges'
   createdAt: string
   createdBy: string | null
-  currency: string | null
   deletedAt: string | null
   description: string | null
   entityId: string | null
   entityType: string | null
   id: string
-  language: string | null
+  inclusive: boolean
+  key: string | null
+  max: number | null
   metadata: { [key: string]: string }
+  min: number | null
   name: string | null
-  parentId: string | null
-  regionCode: string | null
+  scope: string | null
   tags: Tag[]
-  timezone: string | null
+  unit: string | null
   updatedAt: string
-  constructor(data?: Partial<Scope>) {
-    this.access = data?.access || null
-    this.children = data?.children || []
-    this.country = data?.country || null
+  constructor(data?: Partial<Range>) {
     this.createdAt = data?.createdAt || generateDateString()
     this.createdBy = data?.createdBy || null
-    this.currency = data?.currency || null
     this.deletedAt = data?.deletedAt || null
     this.description = data?.description || null
     this.entityId = data?.entityId || null
     this.entityType = data?.entityType || null
     this.id = data?.id || generateUUID()
-    this.language = data?.language || null
+    this.inclusive = data?.inclusive ?? true
+    this.key = data?.key || null
+    this.max = data?.max ?? null
     this.metadata = data?.metadata || {}
+    this.min = data?.min ?? null
     this.name = data?.name || null
-    this.parentId = data?.parentId || null
-    this.regionCode = data?.regionCode || null
+    this.scope = data?.scope || null
     this.tags = data?.tags || []
-    this.timezone = data?.timezone || null
+    this.unit = data?.unit || null
     this.updatedAt = data?.updatedAt || generateDateString()
   }
 }

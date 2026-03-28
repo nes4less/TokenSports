@@ -1,27 +1,25 @@
 import { Tag } from './Tag';
-export declare class Scope {
+export declare class Range {
     static collection: string;
-    access: string | null;
-    children: string[];
-    country: string | null;
     createdAt: string;
     createdBy: string | null;
-    currency: string | null;
     deletedAt: string | null;
     description: string | null;
     entityId: string | null;
     entityType: string | null;
     id: string;
-    language: string | null;
+    inclusive: boolean;
+    key: string | null;
+    max: number | null;
     metadata: {
         [key: string]: string;
     };
+    min: number | null;
     name: string | null;
-    parentId: string | null;
-    regionCode: string | null;
+    scope: string | null;
     tags: Tag[];
-    timezone: string | null;
+    unit: string | null;
     updatedAt: string;
-    constructor(data?: Partial<Scope>);
+    constructor(data?: Partial<Range>);
 }
-//# sourceMappingURL=Scope.d.ts.map
+//# sourceMappingURL=Range.d.ts.map

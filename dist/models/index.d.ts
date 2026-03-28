@@ -23,6 +23,7 @@ export * from './Payment';
 export * from './Person';
 export * from './Publication';
 export * from './Query';
+export * from './Range';
 export * from './Relationship';
 export * from './Roster';
 export * from './RotationGroup';

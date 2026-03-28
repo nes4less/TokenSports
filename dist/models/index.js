@@ -39,6 +39,7 @@ __exportStar(require("./Payment"), exports);
 __exportStar(require("./Person"), exports);
 __exportStar(require("./Publication"), exports);
 __exportStar(require("./Query"), exports);
+__exportStar(require("./Range"), exports);
 __exportStar(require("./Relationship"), exports);
 __exportStar(require("./Roster"), exports);
 __exportStar(require("./RotationGroup"), exports);
