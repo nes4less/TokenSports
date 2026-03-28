@@ -21,6 +21,7 @@ export declare class Person {
     lastActiveContext: string | null;
     lastActiveRole: string | null;
     lastName: string | null;
+    language: string | null;
     manualEntry: boolean;
     metadata: {
         [key: string]: string;

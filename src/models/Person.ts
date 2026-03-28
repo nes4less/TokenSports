@@ -23,6 +23,7 @@ export class Person {
   lastActiveContext: string | null
   lastActiveRole: string | null
   lastName: string | null
+  language: string | null
   manualEntry: boolean
   metadata: { [key: string]: string }
   middleName: string | null
@@ -60,6 +61,7 @@ export class Person {
     this.lastActiveContext = data?.lastActiveContext || null
     this.lastActiveRole = data?.lastActiveRole || null
     this.lastName = data?.lastName || null
+    this.language = data?.language || null
     this.manualEntry = !!data?.manualEntry
     this.metadata = data?.metadata || {}
     this.middleName = data?.middleName || null

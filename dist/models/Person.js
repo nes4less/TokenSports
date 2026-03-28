@@ -23,6 +23,7 @@ class Person {
         this.lastActiveContext = data?.lastActiveContext || null;
         this.lastActiveRole = data?.lastActiveRole || null;
         this.lastName = data?.lastName || null;
+        this.language = data?.language || null;
         this.manualEntry = !!data?.manualEntry;
         this.metadata = data?.metadata || {};
         this.middleName = data?.middleName || null;
