@@ -14,6 +14,7 @@ class Person {
         this.dateOfBirth = data?.dateOfBirth || null;
         this.displayName = data?.displayName || null;
         this.email = data?.email || null;
+        this.enabledRoles = data?.enabledRoles || ['home'];
         this.firstName = data?.firstName || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
         this.image = data?.image || null;

@@ -14,6 +14,7 @@ export class Person {
   dateOfBirth: string | null
   displayName: string | null
   email: string | null
+  enabledRoles: string[]
   firstName: string | null
   id: string
   image: string | null
@@ -47,6 +48,7 @@ export class Person {
     this.dateOfBirth = data?.dateOfBirth || null
     this.displayName = data?.displayName || null
     this.email = data?.email || null
+    this.enabledRoles = data?.enabledRoles || ['home']
     this.firstName = data?.firstName || null
     this.id = data?.id || generateUUID()
     this.image = data?.image || null

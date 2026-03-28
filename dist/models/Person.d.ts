@@ -12,6 +12,7 @@ export declare class Person {
     dateOfBirth: string | null;
     displayName: string | null;
     email: string | null;
+    enabledRoles: string[];
     firstName: string | null;
     id: string;
     image: string | null;
