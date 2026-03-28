@@ -1,38 +1,50 @@
 import { generateDateString, generateUUID } from '../utils'
 import { Tag } from './Tag'
 
-export class View {
-  static collection: string = 'views'
+export class Publication {
+  static collection: string = 'publications'
+  bundle: {
+    ruleSets: unknown[]
+    contexts: unknown[]
+    styles: unknown[]
+    queries: unknown[]
+    views: unknown[]
+  }
+  category: string | null
   createdAt: string
   createdBy: string | null
   deletedAt: string | null
   description: string | null
-  format: string | null
   id: string
-  language: string | null
   metadata: { [key: string]: string }
   name: string | null
-  public: boolean
-  queries: { queryId: string; position: number }[]
-  styleId: string | null
+  orgId: string | null
   tags: Tag[]
   type: string | null
   updatedAt: string
-  constructor(data?: Partial<View>) {
+  version: string | null
+  visibility: string | null
+  constructor(data?: Partial<Publication>) {
+    this.bundle = {
+      ruleSets: data?.bundle?.ruleSets || [],
+      contexts: data?.bundle?.contexts || [],
+      styles: data?.bundle?.styles || [],
+      queries: data?.bundle?.queries || [],
+      views: data?.bundle?.views || [],
+    }
+    this.category = data?.category || null
     this.createdAt = data?.createdAt || generateDateString()
     this.createdBy = data?.createdBy || null
     this.deletedAt = data?.deletedAt || null
     this.description = data?.description || null
-    this.format = data?.format || null
     this.id = data?.id || generateUUID()
-    this.language = data?.language || null
     this.metadata = data?.metadata || {}
     this.name = data?.name || null
-    this.public = data?.public ?? true
-    this.queries = data?.queries || []
-    this.styleId = data?.styleId || null
+    this.orgId = data?.orgId || null
     this.tags = data?.tags || []
     this.type = data?.type || null
     this.updatedAt = data?.updatedAt || generateDateString()
+    this.version = data?.version || null
+    this.visibility = data?.visibility || null
   }
 }

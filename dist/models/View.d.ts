@@ -7,6 +7,7 @@ export declare class View {
     description: string | null;
     format: string | null;
     id: string;
+    language: string | null;
     metadata: {
         [key: string]: string;
     };

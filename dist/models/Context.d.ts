@@ -10,6 +10,7 @@ export declare class Context {
     id: string;
     implications: string | null;
     key: string | null;
+    language: string | null;
     metadata: {
         [key: string]: string;
     };

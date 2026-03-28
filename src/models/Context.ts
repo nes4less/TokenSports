@@ -12,6 +12,7 @@ export class Context {
   id: string
   implications: string | null
   key: string | null
+  language: string | null
   metadata: { [key: string]: string }
   params: { [key: string]: string }
   position: number
@@ -31,6 +32,7 @@ export class Context {
     this.id = data?.id || generateUUID()
     this.implications = data?.implications || null
     this.key = data?.key || null
+    this.language = data?.language || null
     this.metadata = data?.metadata || {}
     this.params = data?.params || {}
     this.position = data?.position ?? 0
