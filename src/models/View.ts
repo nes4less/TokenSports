@@ -9,9 +9,11 @@ export class View {
   description: string | null
   format: string | null
   id: string
+  inputs: { key: string; label: string | null; type: string | null; required: boolean; defaultValue: string | null; params: { [key: string]: string } }[]
   language: string | null
   metadata: { [key: string]: string }
   name: string | null
+  outputs: { key: string; label: string | null; type: string | null; format: string | null; destination: string | null }[]
   public: boolean
   queries: { queryId: string; position: number }[]
   scopeId: string | null
@@ -26,9 +28,11 @@ export class View {
     this.description = data?.description || null
     this.format = data?.format || null
     this.id = data?.id || generateUUID()
+    this.inputs = data?.inputs || []
     this.language = data?.language || null
     this.metadata = data?.metadata || {}
     this.name = data?.name || null
+    this.outputs = data?.outputs || []
     this.public = data?.public ?? true
     this.queries = data?.queries || []
     this.scopeId = data?.scopeId || null

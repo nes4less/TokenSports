@@ -10,9 +10,11 @@ class View {
         this.description = data?.description || null;
         this.format = data?.format || null;
         this.id = data?.id || (0, utils_1.generateUUID)();
+        this.inputs = data?.inputs || [];
         this.language = data?.language || null;
         this.metadata = data?.metadata || {};
         this.name = data?.name || null;
+        this.outputs = data?.outputs || [];
         this.public = data?.public ?? true;
         this.queries = data?.queries || [];
         this.scopeId = data?.scopeId || null;
