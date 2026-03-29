@@ -18,6 +18,7 @@ __exportStar(require("./ColorProfile"), exports);
 __exportStar(require("./Comment"), exports);
 __exportStar(require("./Content"), exports);
 __exportStar(require("./Context"), exports);
+__exportStar(require("./DataSource"), exports);
 __exportStar(require("./Division"), exports);
 __exportStar(require("./Enrollment"), exports);
 __exportStar(require("./Event"), exports);

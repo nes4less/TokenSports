@@ -2,6 +2,7 @@ export * from './ColorProfile';
 export * from './Comment';
 export * from './Content';
 export * from './Context';
+export * from './DataSource';
 export * from './Division';
 export * from './Enrollment';
 export * from './Event';
