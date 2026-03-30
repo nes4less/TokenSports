@@ -14,11 +14,15 @@ export class Context {
   key: string | null
   language: string | null
   metadata: { [key: string]: string }
+  /** Parent context ID for grouping (context-in-context) */
+  parentId: string | null
   params: { [key: string]: string }
   position: number
   public: boolean
   questions: string[]
   scope: string | null
+  /** Scope ID — ties this context to a specific Scope in the org hierarchy */
+  scopeId: string | null
   sort: string | null
   tags: Tag[]
   updatedAt: string
@@ -34,11 +38,13 @@ export class Context {
     this.key = data?.key || null
     this.language = data?.language || null
     this.metadata = data?.metadata || {}
+    this.parentId = data?.parentId || null
     this.params = data?.params || {}
     this.position = data?.position ?? 0
     this.public = data?.public ?? true
     this.questions = data?.questions || []
     this.scope = data?.scope || null
+    this.scopeId = data?.scopeId || null
     this.sort = data?.sort || null
     this.tags = data?.tags || []
     this.updatedAt = data?.updatedAt || generateDateString()

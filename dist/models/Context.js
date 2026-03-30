@@ -15,11 +15,13 @@ class Context {
         this.key = data?.key || null;
         this.language = data?.language || null;
         this.metadata = data?.metadata || {};
+        this.parentId = data?.parentId || null;
         this.params = data?.params || {};
         this.position = data?.position ?? 0;
         this.public = data?.public ?? true;
         this.questions = data?.questions || [];
         this.scope = data?.scope || null;
+        this.scopeId = data?.scopeId || null;
         this.sort = data?.sort || null;
         this.tags = data?.tags || [];
         this.updatedAt = data?.updatedAt || (0, utils_1.generateDateString)();

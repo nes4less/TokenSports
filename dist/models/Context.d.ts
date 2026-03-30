@@ -14,6 +14,8 @@ export declare class Context {
     metadata: {
         [key: string]: string;
     };
+    /** Parent context ID for grouping (context-in-context) */
+    parentId: string | null;
     params: {
         [key: string]: string;
     };
@@ -21,6 +23,8 @@ export declare class Context {
     public: boolean;
     questions: string[];
     scope: string | null;
+    /** Scope ID — ties this context to a specific Scope in the org hierarchy */
+    scopeId: string | null;
     sort: string | null;
     tags: Tag[];
     updatedAt: string;
