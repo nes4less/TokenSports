@@ -14,6 +14,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LocatableModel = void 0;
+// Core models
 __exportStar(require("./ColorProfile"), exports);
 __exportStar(require("./Comment"), exports);
 __exportStar(require("./Content"), exports);
@@ -53,9 +55,26 @@ __exportStar(require("./Session"), exports);
 __exportStar(require("./StatusChange"), exports);
 __exportStar(require("./Style"), exports);
 __exportStar(require("./Subscription"), exports);
+__exportStar(require("./Survey"), exports);
 __exportStar(require("./Tag"), exports);
 __exportStar(require("./Team"), exports);
 __exportStar(require("./Transaction"), exports);
 __exportStar(require("./Venue"), exports);
 __exportStar(require("./View"), exports);
+// Knowledge & improvement pipeline
+__exportStar(require("./AgentFlow"), exports);
+__exportStar(require("./Bandwidth"), exports);
+__exportStar(require("./BugPattern"), exports);
+__exportStar(require("./ChoiceVariant"), exports);
+__exportStar(require("./CostMeasurement"), exports);
+__exportStar(require("./DesignChoice"), exports);
+__exportStar(require("./FlowAgent"), exports);
+__exportStar(require("./Goal"), exports);
+__exportStar(require("./Improvement"), exports);
+__exportStar(require("./RuleOutcome"), exports);
+__exportStar(require("./Todo"), exports);
+__exportStar(require("./Validity"), exports);
+// Aliases
+var Locatable_1 = require("./Locatable");
+Object.defineProperty(exports, "LocatableModel", { enumerable: true, get: function () { return Locatable_1.Locatable; } });
 //# sourceMappingURL=index.js.map

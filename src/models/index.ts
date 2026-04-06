@@ -1,3 +1,4 @@
+// Core models
 export * from './ColorProfile'
 export * from './Comment'
 export * from './Content'
@@ -37,8 +38,26 @@ export * from './Session'
 export * from './StatusChange'
 export * from './Style'
 export * from './Subscription'
+export * from './Survey'
 export * from './Tag'
 export * from './Team'
 export * from './Transaction'
 export * from './Venue'
 export * from './View'
+
+// Knowledge & improvement pipeline
+export * from './AgentFlow'
+export * from './Bandwidth'
+export * from './BugPattern'
+export * from './ChoiceVariant'
+export * from './CostMeasurement'
+export * from './DesignChoice'
+export * from './FlowAgent'
+export * from './Goal'
+export * from './Improvement'
+export * from './RuleOutcome'
+export * from './Todo'
+export * from './Validity'
+
+// Aliases
+export { Locatable as LocatableModel } from './Locatable'
