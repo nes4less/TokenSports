@@ -4,7 +4,7 @@ import {
   ColorProfile, Content, Division, Enrollment, Event, Facility, Flag, Game,
   GameAssignment, GameRecord, GuestPass, Image, League, Media, Module,
   Notification, Organization, Participation, Payment, Person, Relationship,
-  Roster, RotationGroup, Ruleset, Session, Tag, Team, Transaction, Venue
+  Roster, RotationGroup, RuleSet, Session, Tag, Team, Transaction, Venue
 } from '../src'
 
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017'
@@ -18,7 +18,7 @@ const seed = async () => {
   // Clear all collections
   const collections = [
     Person.collection, Organization.collection, Facility.collection, Venue.collection,
-    Session.collection, League.collection, Division.collection, Ruleset.collection,
+    Session.collection, League.collection, Division.collection, RuleSet.collection,
     Team.collection, Enrollment.collection, Roster.collection, Participation.collection,
     RotationGroup.collection, Game.collection, GameRecord.collection, Event.collection,
     GameAssignment.collection, Payment.collection, Transaction.collection, Media.collection,
@@ -82,18 +82,18 @@ const seed = async () => {
 
   // ==================== RULESETS ====================
   const rulesets = [
-    new Ruleset({ name: 'Adult Coed Soccer', preset: 'soccer', participationModel: 'team', createdBy: persons[4].id, tags: [new Tag({ title: 'coed' }), new Tag({ title: 'adult' })], metadata: { periods: '2', periodLength: '25', clockType: 'count-up', minPlayers: '7', maxPlayers: '11', femaleMinimum: '3', femaleGoalValue: '2', overtimeType: 'none', offsideRule: 'no', slideTackle: 'no' } }),
-    new Ruleset({ name: 'Youth Soccer U12', preset: 'soccer', participationModel: 'team', createdBy: persons[4].id, tags: [new Tag({ title: 'youth' })], metadata: { periods: '2', periodLength: '20', clockType: 'count-up', minPlayers: '6', maxPlayers: '8', headingAllowed: 'no', buildOutLine: 'yes' } }),
-    new Ruleset({ name: 'Adult Rec Basketball', preset: 'basketball', participationModel: 'team', createdBy: persons[4].id, tags: [new Tag({ title: 'adult' }), new Tag({ title: 'rec' })], metadata: { periods: '4', periodLength: '8', clockType: 'count-down', shotClock: 'none', foulLimit: '5', timeoutsPerHalf: '2', overtimeLength: '3' } })
+    new RuleSet({ name: 'Adult Coed Soccer', preset: 'soccer', createdBy: persons[4].id, tags: [new Tag({ title: 'coed' }), new Tag({ title: 'adult' })], metadata: { periods: '2', periodLength: '25', clockType: 'count-up', minPlayers: '7', maxPlayers: '11', femaleMinimum: '3', femaleGoalValue: '2', overtimeType: 'none', offsideRule: 'no', slideTackle: 'no' } }),
+    new RuleSet({ name: 'Youth Soccer U12', preset: 'soccer', createdBy: persons[4].id, tags: [new Tag({ title: 'youth' })], metadata: { periods: '2', periodLength: '20', clockType: 'count-up', minPlayers: '6', maxPlayers: '8', headingAllowed: 'no', buildOutLine: 'yes' } }),
+    new RuleSet({ name: 'Adult Rec Basketball', preset: 'basketball', createdBy: persons[4].id, tags: [new Tag({ title: 'adult' }), new Tag({ title: 'rec' })], metadata: { periods: '4', periodLength: '8', clockType: 'count-down', shotClock: 'none', foulLimit: '5', timeoutsPerHalf: '2', overtimeLength: '3' } })
   ]
-  await db.collection(Ruleset.collection).insertMany(rulesets)
+  await db.collection(RuleSet.collection).insertMany(rulesets)
   console.log(`✓ ${rulesets.length} rulesets`)
 
   // ==================== LEAGUES ====================
   const leagues = [
-    new League({ name: 'Adult Coed Soccer League', slug: 'adult-coed-soccer', orgId: orgs[0].id, sessionId: sessions[0].id, rulesetId: rulesets[0].id, sportType: 'soccer', participationModel: 'team', status: 'active', registrationOpen: '2026-01-15', registrationClose: '2026-02-28', createdBy: persons[4].id, image: 'https://placehold.co/400x400/2563eb/white?text=ACSL', tags: [new Tag({ title: 'coed' })], metadata: { officialPayRate: '35', maxTeams: '12', gamesPerTeam: '10' } }),
-    new League({ name: 'Youth Soccer U12', slug: 'youth-u12', orgId: orgs[0].id, sessionId: sessions[0].id, rulesetId: rulesets[1].id, sportType: 'soccer', participationModel: 'team', status: 'active', registrationOpen: '2026-01-15', registrationClose: '2026-02-28', createdBy: persons[4].id, image: 'https://placehold.co/400x400/f59e0b/white?text=YU12', tags: [new Tag({ title: 'youth' })], metadata: { officialPayRate: '25', maxTeams: '8' } }),
-    new League({ name: 'Spring Rec Kickball', slug: 'spring-kickball', orgId: orgs[1].id, sessionId: sessions[2].id, rulesetId: rulesets[0].id, sportType: 'kickball', participationModel: 'team', status: 'draft', createdBy: persons[0].id, tags: [new Tag({ title: 'rec' })], metadata: { officialPayRate: '20' } })
+    new League({ name: 'Adult Coed Soccer League', slug: 'adult-coed-soccer', orgId: orgs[0].id, sessionId: sessions[0].id, ruleSetId: rulesets[0].id, sportType: 'soccer', participationModel: 'team', status: 'active', registrationOpen: '2026-01-15', registrationClose: '2026-02-28', createdBy: persons[4].id, image: 'https://placehold.co/400x400/2563eb/white?text=ACSL', tags: [new Tag({ title: 'coed' })], metadata: { officialPayRate: '35', maxTeams: '12', gamesPerTeam: '10' } }),
+    new League({ name: 'Youth Soccer U12', slug: 'youth-u12', orgId: orgs[0].id, sessionId: sessions[0].id, ruleSetId: rulesets[1].id, sportType: 'soccer', participationModel: 'team', status: 'active', registrationOpen: '2026-01-15', registrationClose: '2026-02-28', createdBy: persons[4].id, image: 'https://placehold.co/400x400/f59e0b/white?text=YU12', tags: [new Tag({ title: 'youth' })], metadata: { officialPayRate: '25', maxTeams: '8' } }),
+    new League({ name: 'Spring Rec Kickball', slug: 'spring-kickball', orgId: orgs[1].id, sessionId: sessions[2].id, ruleSetId: rulesets[0].id, sportType: 'kickball', participationModel: 'team', status: 'draft', createdBy: persons[0].id, tags: [new Tag({ title: 'rec' })], metadata: { officialPayRate: '20' } })
   ]
   await db.collection(League.collection).insertMany(leagues)
   console.log(`✓ ${leagues.length} leagues`)
@@ -120,10 +120,10 @@ const seed = async () => {
 
   // ==================== ENROLLMENTS ====================
   const enrollments = [
-    new Enrollment({ teamId: teams[0].id, divisionId: divisions[0].id, status: 'active', type: 'guaranteed', participationModel: 'team', createdBy: persons[0].id, color: new ColorProfile({ primaryHex: '#2563eb', secondaryHex: '#ffffff', confirmed: true }), metadata: {} }),
-    new Enrollment({ teamId: teams[1].id, divisionId: divisions[0].id, status: 'active', type: 'guaranteed', participationModel: 'team', createdBy: persons[4].id, color: new ColorProfile({ primaryHex: '#ea580c', secondaryHex: '#000000', confirmed: true }), metadata: {} }),
-    new Enrollment({ teamId: teams[2].id, divisionId: divisions[1].id, status: 'active', type: 'guaranteed', participationModel: 'team', createdBy: persons[5].id, metadata: {} }),
-    new Enrollment({ teamId: teams[3].id, divisionId: divisions[1].id, status: 'applied', type: 'reserve', participationModel: 'team', createdBy: persons[6].id, metadata: {} })
+    new Enrollment({ teamId: teams[0].id, divisionId: divisions[0].id, status: 'active', type: 'guaranteed', createdBy: persons[0].id, color: new ColorProfile({ primaryHex: '#2563eb', secondaryHex: '#ffffff', confirmed: true }), metadata: {} }),
+    new Enrollment({ teamId: teams[1].id, divisionId: divisions[0].id, status: 'active', type: 'guaranteed', createdBy: persons[4].id, color: new ColorProfile({ primaryHex: '#ea580c', secondaryHex: '#000000', confirmed: true }), metadata: {} }),
+    new Enrollment({ teamId: teams[2].id, divisionId: divisions[1].id, status: 'active', type: 'guaranteed', createdBy: persons[5].id, metadata: {} }),
+    new Enrollment({ teamId: teams[3].id, divisionId: divisions[1].id, status: 'applied', type: 'reserve', createdBy: persons[6].id, metadata: {} })
   ]
   await db.collection(Enrollment.collection).insertMany(enrollments)
   console.log(`✓ ${enrollments.length} enrollments`)
